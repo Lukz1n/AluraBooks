@@ -1,0 +1,58 @@
+@import url("styles/header.css");
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+
+:root {
+    --cor-de-fundo: #EBECEE;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+    --fonte-principal: "Poppins";
+    --azul: #002F52;
+}
+
+body {
+  transition: opacity 1s ease-in-out; /* Transição suave */
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.botões__ancora { 
+    border-radius: 5px; /* Para bordas arredondadas, se desejar */
+}
+
+.tópicos__link {
+    border-radius: 5px;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+  backdrop-filter: blur(5px); /* Desfoque do fundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Certifique-se de que fique acima de tudo */
+}
+
+.loading {
+  width: 40px; /* Tamanho do carregamento */
+  height: 40px;
+  border: 5px solid transparent;
+  border-top: 5px solid #000; /* Cor da borda */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
